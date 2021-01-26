@@ -1,22 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import './stylesheets/App.css';
 
 function App() {
   return (
     <div className="text-center">
       <header className="App-header">
-        <img src={logo} className="animate-spin App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>holi</h1>
       </header>
     </div>
   );
