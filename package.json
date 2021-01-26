@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "server": "cd server && npm install",
-    "client": "cd client && npm install",
-    "setup": "npm-run-all --parallel server client",
+    "install:server": "cd server && npm install",
+    "install:client": "cd client && npm install",
+    "setup": "npm-run-all install:server install:client",
     "postinstall": "npm run setup",
-    "clientstart": "cd client && npm run serve",
+    "clientstart": "cd client && npm run start",
     "serverstart": "cd server && npm run start",
-    "dev": "npm-run-all --parallel serverstart clientstart"
+    "start": "npm-run-all --parallel serverstart clientstart"
   },
   "husky": {
     "hooks": {
