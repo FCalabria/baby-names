@@ -1,0 +1,8 @@
+@import 'core/functions';
+@import './core/variables';
+@import './core/mixins';
+@import './core/reset';
+
+body {
+  background-color: $color-background;
+}

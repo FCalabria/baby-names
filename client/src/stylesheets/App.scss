@@ -1,0 +1,45 @@
+@import 'core/functions';
+@import 'core/variables';
+@import 'core/mixins';
+@import 'core/reset';
+
+@import 'layout/_filter';
+@import 'layout/_button';
+
+@import './index';
+
+.App {
+  font-family: $font-primary;
+  display: flex;
+}
+
+.App--header {
+  position: fixed;
+
+  h1.hidden {
+    display: none;
+  }
+  .logo {
+    width: rem(150);
+    padding: rem(20);
+  }
+}
+
+.App--section {
+  top: -rem(150);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: -1;
+  .App--newName {
+    width: rem(800);
+    height: rem(130);
+    margin-bottom: rem(90);
+    background-color: $color-dark;
+    opacity: 0.2;
+  }
+}
