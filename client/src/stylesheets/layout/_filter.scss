@@ -13,9 +13,10 @@
   justify-content: space-around;
   right: -150px;
 
-
   .App--filter__option {
-    display: inherit;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
     text-transform: uppercase;
     border: rem(5) solid $color-dark;
     box-sizing: border-box;
@@ -23,56 +24,8 @@
     width: rem(450);
     height: rem(70);
     margin: 12px;
-
-    p {
-      margin: rem(15);
-      align-self: center;
-    }
-
-    .switch[type='checkbox'] {
-      height: 0;
-      width: 0;
-      visibility: hidden;
-    }
-
-    label {
-      margin: rem(15);
-      cursor: pointer;
-      width: rem(44);
-      height: rem(24);
-      background: $color-light;
-      display: block;
-      border-radius: rem(20);
-      border: 1px solid $color-dark;
-      position: relative;
-      align-self: center;
-    }
-
-    label:after {
-      content: '';
-      position: absolute;
-      top: rem(1);
-      left: rem(2);
-      width: rem(18);
-      height: rem(18);
-      background: $color-background;
-      border-radius: rem(10);
-      border: 1px solid $color-dark;
-      transition: 0.3s;
-    }
-
-    .switch:checked + label {
-      background: $color-light;
-    }
-
-    .switch:checked + label:after {
-      left: calc(100% - 4px);
-      transform: translateX(-100%);
-      background: $color-logo;
-    }
-
-    label:active:after {
-      width: rem(13);
+    div {
+      margin: 12px;
     }
   }
 }

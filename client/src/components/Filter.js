@@ -10,9 +10,13 @@ class Filter extends React.Component {
 
     const filterList = this.props.filters.map((filter, index) => {
       return (
-        <div className="App--filter__option filters hidden">
-          <input type="checkbox" className="switch" id={index + 1} />
-          <label for="switch"></label><p>{filter}</p></div>
+        <div className="App--filter__option hidden">
+          <div className="mt-normal-garden" style={{fontSize:12}}>
+            <input type="checkbox" className="switch" id={index + 1} />
+            <label for={index + 1}></label>
+          </div>
+          <p>{filter}</p>
+        </div>
       )
     }
     );
@@ -22,8 +26,12 @@ class Filter extends React.Component {
       <aside className="App--filter">
 
         <div className="App--filter__option controler shown" onClick={this.props.closeCallback}>
-          <input type="checkbox" className="switch" id="filterControl" />
-          <label for="switch"></label><p>filters</p></div>
+          <div className="mt-yesno-garden" style={{fontSize:14}}>
+            <input type="checkbox" id="filterControl" />
+            <label for="filterControl"></label>
+          </div>
+          <p>filters</p>
+        </div>
 
         {filterList}
       </aside>
