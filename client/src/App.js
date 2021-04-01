@@ -10,17 +10,24 @@ class App extends React.Component {
     super(props);
     this.state = {
       filters: filters,
-      filterOpen: false,
+      filtersToggle: 'shown',
+
+      famousHumans: true,
+      foodies: true,
+      famousAnimals: true,
+      compoundNames: true,
+      epic: true,
+      classic: true,
     };
+    this.toggleFilters = this.toggleFilters.bind(this);
   }
 
-  openFilters() {
-    this.setState({ filterOpen: true })
+  toggleFilters() {
+    this.setState((prevState, props) => ({
+      filtersToggle: prevState.filtersToggle === 'shown' ? 'hidden' : 'shown'
+    })); 
   }
 
-  closeFilters() {
-    this.setState({ filterOpen: false })
-  }
 
   render() {
     return (
@@ -40,9 +47,7 @@ class App extends React.Component {
             </div>
           </section>
 
-          <Filter filters={this.state.filters}
-            isOpen={this.state.filterOpen}
-            closeCallback={this.closeFilters.bind(this)} />
+          <Filter filters={this.state.filters} filtersToggle={this.state.filtersToggle} toggleFilters={this.toggleFilters}/>
         </main>
 
       </div>

@@ -28,19 +28,30 @@
       margin: 12px;
     }
   }
+
+  .App--filter__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+  }
 }
 
-.App--filter__option.shown {
-  background-color: $color-filter-open;
+.App--filter__container.shown {
+  .App--filter__option {
+    background-color: $color-filter-open;
+  }
 }
-.App--filter__option.hidden {
-  background-color: $color-filter-close;
+
+.App--filter__container.hidden {
+  transform: translateX(250px);
+  .App--filter__option {
+    background-color: $color-filter-close;
+  }
 }
+  
 
 /*.App--filter:not(:first-child) {
   transform: translateX(40px);
 } */
 
-.App--filter .filters {
-  transform: translateX(250px);
-}
