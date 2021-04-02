@@ -20,13 +20,20 @@ class App extends React.Component {
       classic: true,
     };
     this.toggleFilters = this.toggleFilters.bind(this);
+    this.handleFilters = this.handleFilters.bind(this);
   }
 
   toggleFilters() {
-    this.setState((prevState, props) => ({
+    this.setState(prevState => ({
       filtersToggle: prevState.filtersToggle === 'shown' ? 'hidden' : 'shown'
     })); 
   }
+
+handleFilters(data)  {
+  this.setState(prevState => ({
+    [data]: prevState[data] === true ? false : true
+   }));
+  };
 
 
   render() {
@@ -47,7 +54,7 @@ class App extends React.Component {
             </div>
           </section>
 
-          <Filter filters={this.state.filters} filtersToggle={this.state.filtersToggle} toggleFilters={this.toggleFilters}/>
+          <Filter filters={this.state.filters} filtersToggle={this.state.filtersToggle} toggleFilters={this.toggleFilters} handleFilters={this.handleFilters}/>
         </main>
 
       </div>
