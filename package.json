@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@react-firebase/database": "^0.3.11",
-    "firebase": "^8.3.3",
+    "firebase": "^8.4.2",
     "node-sass": "^4.14.1",
     "reactfire": "^3.0.0-rc.0"
   }
