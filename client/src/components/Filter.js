@@ -17,7 +17,7 @@ class Filter extends React.Component {
       return (
         <div className="App--filter__option" key={` ${filter}-${index + 1}`}>
           <div className="mt-normal-garden" style={{fontSize:12}}>
-            <input type="checkbox" checked className="switch" id={filter} onChange={this.handleFilterName}/>
+            <input type="checkbox" className="switch" id={filter} onChange={this.handleFilterName} />
             <label htmlFor={filter}></label>
           </div>
           <p>{filter}</p>
